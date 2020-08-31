@@ -10,10 +10,12 @@ public class Car {
     @Inject
     public Body body;
 
+    int  modelNum;
 
 
     @Inject
-    public Car() {
+    public Car(int modelNum) {
+        this.modelNum=modelNum;
 
     }
 

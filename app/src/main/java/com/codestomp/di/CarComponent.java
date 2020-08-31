@@ -2,7 +2,7 @@ package com.codestomp.di;
 
 import dagger.Component;
 
-@Component
+@Component(modules = {CarModules.class})
 public interface CarComponent {
     Car buildCar();
 

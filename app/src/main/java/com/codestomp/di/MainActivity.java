@@ -19,8 +19,8 @@ public class MainActivity extends AppCompatActivity {
         CarComponent carComponent = DaggerCarComponent.create();
         carComponent.inject(this);
         // we always need to call next two functions ever time i had made an instance of this class just make @inject for methos you need
-//        tvMainText.append(car.testBody());
-//        tvMainText.append(car.testEngine());
+        tvMainText.append(car.testBody());
+        tvMainText.append(car.testEngine());
         tvMainText.append(car.getCarCreation());
 
     }
