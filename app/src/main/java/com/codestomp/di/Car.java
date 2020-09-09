@@ -1,6 +1,7 @@
 package com.codestomp.di;
 
 import javax.inject.Inject;
+import javax.inject.Named;
 
 public class Car {
 
@@ -10,18 +11,19 @@ public class Car {
     @Inject
     public Body body;
 
-    int  modelNum;
+    int  modelNum,engineNum;
 
 
     @Inject
-    public Car(int modelNum) {
+    public Car(@Named("modelNum") int modelNum,@Named("engineNum") int engineNum) {
         this.modelNum=modelNum;
+        this.engineNum=engineNum;
 
     }
 
     public  String getCarCreation()
     {
-        return body.getBodyNumber() + engine.getEngineNumber();
+        return body.getBodyNumber()+ modelNum+ engine.getEngineNumber() + engineNum;
     }
 
     @Inject

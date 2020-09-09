@@ -16,7 +16,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         TextView tvMainText = findViewById(R.id.tvMainText);
-        CarComponent carComponent = DaggerCarComponent.create();
+        CarComponent carComponent = DaggerCarComponent.builder().modelNum(2012).engineNum(111001).build();
         carComponent.inject(this);
         // we always need to call next two functions ever time i had made an instance of this class just make @inject for methos you need
         tvMainText.append(car.testBody());

@@ -12,6 +12,6 @@ public class Body {
 
     public String getBodyNumber()
     {
-        return  "bodyNum is 200 ";
+        return  "Model Number  is : ";
     }
 }
